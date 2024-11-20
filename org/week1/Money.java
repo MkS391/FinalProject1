@@ -1,3 +1,5 @@
+package org.week1;
+
 /**
  * This class represents nonnegative amounts of money.
  */
@@ -26,7 +28,7 @@ public class Money {
 
     // ADD LINES FOR TASK #1 HERE
 // Document and write a copy constructor
-    public Money(Money otherObject){
+    public Money(Money otherObject) {
         this.dollars = otherObject.dollars;
         this.cents = otherObject.cents;
     }
@@ -95,13 +97,15 @@ public class Money {
             value = 0;
         return value;
     }
-// ADD LINES FOR TASK #2 HERE
+
+    // ADD LINES FOR TASK #2 HERE
 // Document and write an equals method
     public boolean equals(Money otherObject) {
         return this.dollars == otherObject.dollars && this.cents == otherObject.cents;
     }
-// Document and write a toString method
-    public String toString(){
-        return String.format("$%d.%02d",dollars,cents);
+
+    // Document and write a toString method
+    public String toString() {
+        return String.format("$%d.%02d", dollars, cents);
     }
 }

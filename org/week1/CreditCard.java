@@ -1,3 +1,5 @@
+package org.week1;
+
 public class CreditCard {
     private Money balance;
     private Money creditLimit;
@@ -10,11 +12,11 @@ public class CreditCard {
     }
 
     public Money getBalance() {
-        return new Money (balance);
+        return new Money(balance);
     }
 
     public Money getCreditLimit() {
-        return new Money (creditLimit);
+        return new Money(creditLimit);
     }
 
     public String getPersonals() {
@@ -23,16 +25,16 @@ public class CreditCard {
 
     public void charge(Money amount) {
         Money newBalance = amount.add(balance);
-        if(creditLimit.compareTo(newBalance) >= 0){
+        if (creditLimit.compareTo(newBalance) >= 0) {
             balance = newBalance;
-            System.out.printf("%s:%10s%n","Charge",amount);
-        }else {
+            System.out.printf("%s:%10s%n", "Charge", amount);
+        } else {
             System.out.println("Exceeds your credit limit");
         }
     }
 
     public void payment(Money amount) {
-       balance = balance.subtract(amount);
+        balance = balance.subtract(amount);
         System.out.println("Payment: " + balance);
     }
 }

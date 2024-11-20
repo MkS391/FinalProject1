@@ -1,3 +1,5 @@
+package org.week1;
+
 /**
  * This class defines a person by name and address.
  */
@@ -10,12 +12,14 @@ public class Person {
     private Address home;
 
     /**
-     Constructor
-     @param last The person's last name.
-     @param first The person's first name.
-     @param residence The person's address. */
-     public Person(String last, String first,
-     Address residence){
+     * Constructor
+     *
+     * @param last      The person's last name.
+     * @param first     The person's first name.
+     * @param residence The person's address.
+     */
+    public Person(String last, String first,
+                  Address residence) {
         lastName = last;
         firstName = first;
         home = residence;
